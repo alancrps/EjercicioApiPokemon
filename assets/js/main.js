@@ -1,5 +1,5 @@
 async function generarPoke(){
-    //numero al azar para la obtención del pokemon
+    //Generación de numero al azar para la obtención del pokemon
     var randomNumber = Math.floor((Math.random() * 1010) + 1);
     console.log(randomNumber)
     
@@ -29,13 +29,12 @@ async function generarPoke(){
     console.log(pokeType)
 
     var pokemonType = pokeType.forEach(function(elemento){
-        console.log(elemento.type.name)
+        var elementoName = (elemento.type.name)
+        console.log(elementoName)
+        const pokeStats = `
+        <p>Tipo: ${elementoName}</p>
+        `
+        document.getElementById("statsPokemon").innerHTML = pokeStats;
         
     })
-
-    const pokeStats = `
-    <p>${pokemonType}</p>
-    `
-
-    document.getElementById("statsPokemon").innerHTML = pokeStats;
 }
