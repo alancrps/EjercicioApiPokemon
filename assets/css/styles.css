@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/gengar_background.png");
+    background-repeat: repeat;
+}
+
+#subBox {
+    border-radius: 3%;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(167, 106, 236, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    box-shadow: -3px 20px 61px 7px rgba(145, 48, 255, 0.9);
+    -webkit-box-shadow: -3px 20px 61px 7px rgba(145, 48, 255, 0.9);
+    -moz-box-shadow: -3px 20px 61px 7px rgba(145, 48, 255, 0.9);
+}
+
+h1 {
+    align-self: center;
+    color: rgba(255, 255, 255, 0.74);
+    font-family: 'Delicious Handrawn', cursive;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: rgba(238, 143, 255, 0.74);
+    text-align: center;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.contenido {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid rgba(255, 128, 253, 0.74);
+    border-radius: 4px;
+    display: inline-block;
+    color: rgba(255, 128, 253, 0.74);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 5px;
+    padding: 0 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: rgba(255, 128, 253, 0.74);
+    color: #fff;
+    transition: all .4s ease-in-out;
+}
+
+p {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    
+}
