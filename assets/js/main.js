@@ -17,24 +17,36 @@ async function generarPoke(){
     var pokeImg = dataJson.sprites.front_default;
     console.log(pokeImg)
 
-    const pokeInfo = `
+    const pokeSprite = `
     <h2>${poke}</h2>
     <img src="${pokeImg}">
     `
-    document.getElementById("infoPokemon").innerHTML = pokeInfo;
+    document.getElementById("infoPokemon").innerHTML = pokeSprite;
 
-    //stats y tipo de pokemon
-
+    //tipo del pokemon
     var pokeType = dataJson.types;
     console.log(pokeType)
 
-    var pokemonType = pokeType.forEach(function(elemento){
-        var elementoName = (elemento.type.name)
-        console.log(elementoName)
-        const pokeStats = `
-        <p>Tipo: ${elementoName}</p>
+    var pokemonTypeText = "";
+
+    pokeType.forEach(function(elemento, i){
+        pokemonTypeText +=`
+        <p><span id="colorSpan">Tipo(${i+1}):</span> ${elemento.type.name}</p>
         `
-        document.getElementById("statsPokemon").innerHTML = pokeStats;
-        
+        console.log(pokemonTypeText)
+        document.getElementById("typePokemon").innerHTML = pokemonTypeText;
+    })
+
+    //stats del pokemon
+    var pokeStats = dataJson.stats;
+    console.log(pokeStats)
+
+    var pokemonStatsText = "";
+
+    pokeStats.forEach(function(elemento){
+        pokemonStatsText +=`
+        <p><span id="colorSpan">${elemento.stat.name}:</span> ${elemento.base_stat}</p>
+        `
+        document.getElementById("statsPokemon").innerHTML = pokemonStatsText;
     })
 }
